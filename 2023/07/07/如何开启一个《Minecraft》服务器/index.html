@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+    
+    <title>如何开启一个《Minecraft》服务器 - xiaojiang233的备用博客</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <meta name="description" content="本期视频是《Minecraft Java Edition》的开服方法，如果你是基岩版玩家或者中国版玩家，可以ctrl+W 如果你是中国版玩家，那么请去 mc.163.com 租个租赁服 如果你是国际java版玩家，往下翻； 前言:什么是我的世界请自己去看百科  常用的服务端原版：Vanila 插件：Spigot、Paper 模组：Sponge、Mohist、Forge&#x2F;Fabric">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何开启一个《Minecraft》服务器">
+<meta property="og:url" content="http://example.com/2023/07/07/%E5%A6%82%E4%BD%95%E5%BC%80%E5%90%AF%E4%B8%80%E4%B8%AA%E3%80%8AMinecraft%E3%80%8B%E6%9C%8D%E5%8A%A1%E5%99%A8/index.html">
+<meta property="og:site_name" content="xiaojiang233的备用博客">
+<meta property="og:description" content="本期视频是《Minecraft Java Edition》的开服方法，如果你是基岩版玩家或者中国版玩家，可以ctrl+W 如果你是中国版玩家，那么请去 mc.163.com 租个租赁服 如果你是国际java版玩家，往下翻； 前言:什么是我的世界请自己去看百科  常用的服务端原版：Vanila 插件：Spigot、Paper 模组：Sponge、Mohist、Forge&#x2F;Fabric">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.minecraft.net/content/dam/minecraft/home/home-hero-1200x600.jpg">
+<meta property="article:published_time" content="2023-07-07T14:37:02.000Z">
+<meta property="article:modified_time" content="2023-07-07T14:38:32.134Z">
+<meta property="article:author" content="xiaojiang233">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.minecraft.net/content/dam/minecraft/home/home-hero-1200x600.jpg">
+    
+<link rel="stylesheet" href="/lib/fancybox/fancybox.css">
+<link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
+
+
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1688740737047">
+    
+    <link rel="stylesheet" href="/css/style.css?v=1688740737047">
+
+    
+        
+            <link rel="stylesheet" href="/custom.css?v=1688740737047">
+        
+    
+
+    
+<script src="/lib/mdui_043tiny/mdui.js" async></script>
+<script src="/lib/fancybox/fancybox.umd.js" async></script>
+
+
+    <script async src="/js/app.js?v=1688740737047"></script>
+    
+     
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4D4ZJ9G024"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+
+  gtag("config", "G-4D4ZJ9G024");
+</script>
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body class="mdui-drawer-body-left">
+    <div id="nexmoe-background">
+        <div class="nexmoe-bg" 
+            style="background-image: url(https://api.fanet.top/img/r/genshin)"
+        ></div>
+        <div class="mdui-appbar mdui-shadow-0">
+            <div class="mdui-toolbar">
+                <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
+                <div class="mdui-toolbar-spacer"></div>
+                <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+                <a href="/" title="xiaojiang233" class="mdui-btn mdui-btn-icon"><img src="https://cdn.staticaly.com/gh/xiaojiangxj233/image-repo@main/images/xiaojiang233.2z58u17jt7u0.webp" alt="xiaojiang233"></a>
+            </div>
+        </div>
+    </div>
+    <div id="nexmoe-header">
+        <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="xiaojiang233">
+            <img src="https://cdn.staticaly.com/gh/xiaojiangxj233/image-repo@main/images/xiaojiang233.2z58u17jt7u0.webp" alt="xiaojiang233" alt="xiaojiang233">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>3</div>
+        <div><span>标签</span>0</div>
+        <div><span>分类</span>0</div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/archive.html" title="文章归档">
+            <i class="mdui-list-item-icon nexmoefont icon-container"></i>
+            <div class="mdui-list-item-content">
+                文章归档
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/PY.html" title="我的朋友">
+            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
+            <div class="mdui-list-item-content">
+                我的朋友
+            </div>
+        </a>
+        
+    </div>
+    <aside id="nexmoe-sidebar">
+        
+            
+            <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search">
+         
+            <form id="search_form" action_e="https://cn.bing.com/search?q=site:nexmoe.com" onsubmit="return search();">
+                <label><input id="search_value" name="q" type="search" placeholder="搜索"></label>
+            </form>
+         
+    </div>
+</div>
+
+
+
+
+        
+            
+            <div class="nexmoe-widget-wrap">
+	<div class="nexmoe-widget nexmoe-social">
+		<a
+			class="mdui-ripple"
+			href="https://space.bilibili.com/533406686"
+			target="_blank"
+			mdui-tooltip="{content: '哔哩哔哩'}"
+			style="
+				color: rgb(231, 106, 141);
+				background-color: rgba(231, 106, 141, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-bilibili"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://github.com/xiaojiangxj233"
+			target="_blank"
+			mdui-tooltip="{content: 'GitHub'}"
+			style="
+				color: rgb(25, 23, 23);
+				background-color: rgba(25, 23, 23, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-github"
+			></i> </a
+		>
+	</div>
+</div>
+
+        
+            
+            
+
+        
+            
+            
+        
+            
+            
+            
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章归档</h3>
+    <div class="nexmoe-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">3</span></li></ul>
+    </div>
+  </div>
+
+
+
+        
+            
+            
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">最新文章</h3>
+    <div class="nexmoe-widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/07/07/%E5%A6%82%E4%BD%95%E5%BC%80%E5%90%AF%E4%B8%80%E4%B8%AA%E3%80%8AMinecraft%E3%80%8B%E6%9C%8D%E5%8A%A1%E5%99%A8/">如何开启一个《Minecraft》服务器</a>
+          </li>
+        
+          <li>
+            <a href="/2023/01/19/114514/">114514</a>
+          </li>
+        
+          <li>
+            <a href="/2023/01/19/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+        
+            
+            <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-link">
+		<ul>
+        
+            <li>
+                <a href="https://rong6.cn" target="_blank" >
+                    <img src="https://cdn.staticaly.com/gh/xiaojiangxj233/image-repo@main/images/王傻逼.52p0nnl9whc0.webp" alt="荣6呀"></img>
+                    <p>荣6呀</p>
+                </a>
+            </li>
+        
+		</ul>
+    </div>
+</div>
+<style>
+.nexmoe-widget-wrap .nexmoe-link ul li a {
+    text-align : center;
+}
+.nexmoe-widget-wrap .nexmoe-link ul li a img {
+    max-width : 100%;
+}
+.nexmoe-widget-wrap .nexmoe-link ul li a p {
+    margin: 10px 0;
+}
+</style>
+
+        
+    </aside>
+    <div class="nexmoe-copyright">
+        &copy; 2023 xiaojiang233
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
+        <br><a target="_blank" href="https://beian.miit.gov.cn/">鄂ICP备2020018486号</a>
+<br><a target="_blank" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">
+<img src="https://i.dawnlab.me/c0268c1e6cfd0863d6ba35be1575941a.png" width="150px"></a>
+
+    </div>
+</div><!-- .nexmoe-drawer -->
+    </div>
+    <div id="nexmoe-content">
+        <div class="nexmoe-primary">
+    <div class="nexmoe-post">
+  <article>
+    
+        <div class="nexmoe-post-cover"> 
+            <img src="https://api.fanet.top/img/r/genshin" alt="如何开启一个《Minecraft》服务器" loading="lazy">
+            <h1>如何开启一个《Minecraft》服务器</h1>
+        </div>
+    
+    
+    <div class="nexmoe-post-meta">
+    <div class="nexmoe-rainbow">
+        <a class="nexmoefont icon-calendar-fill">2023年07月07日</a>
+        
+        
+    </div>
+    
+    
+    
+    
+    
+</div>
+
+    <p>  <img onerror="imgOnError(this);" data-fancybox="gallery" src="https://www.minecraft.net/content/dam/minecraft/home/home-hero-1200x600.jpg" alt="home-hero-1200x600.jpg" data-caption="home-hero-1200x600.jpg" loading="lazy"><br>本期视频是《Minecraft Java Edition》的开服方法，如果你是基岩版玩家或者中国版玩家，可以ctrl+W</p>
+<p>如果你是中国版玩家，那么请去 <a target="_blank" rel="noopener" href="https://mc.163.com/">mc.163.com</a> 租个租赁服</p>
+<p>如果你是国际java版玩家，往下翻；</p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言:"></a>前言:</h1><h3 id="什么是我的世界"><a href="#什么是我的世界" class="headerlink" title="什么是我的世界"></a>什么是我的世界</h3><p><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C">请自己去看百科</a> </p>
+<h3 id="常用的服务端"><a href="#常用的服务端" class="headerlink" title="常用的服务端"></a>常用的服务端</h3><p>原版：Vanila</p>
+<p>插件：Spigot、Paper</p>
+<p>模组：Sponge、Mohist、Forge&#x2F;Fabric</p>
+<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><p>(本文章以最新java正式版1.19.3原版服务端（Vanila）为例)</p>
+<h3 id="下载java"><a href="#下载java" class="headerlink" title="下载java"></a>下载java</h3><p>从 <a target="_blank" rel="noopener" href="https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html">java官网</a> 下载Windows x64 Installer。或者直接 <a target="_blank" rel="noopener" href="https://download.oracle.com/java/17/archive/jdk-17.0.5_windows-x64_bin.exe">点这</a> 下载，下载完后一路下一步。</p>
+<h3 id="下载服务端"><a href="#下载服务端" class="headerlink" title="下载服务端"></a>下载服务端</h3><p>你可以从官方启动器下（应该不用教吧），也可以从我的 <a target="_blank" rel="noopener" href="https://dl.xiaojiang233.xyz/mc%E6%9C%8D%E5%8A%A1%E7%AB%AF/Vanila">资源站</a> 下。下好后把后缀为.jar的文件放到一个空目录内（最好不要有中文）</p>
+<h3 id="启动服务端"><a href="#启动服务端" class="headerlink" title="启动服务端"></a>启动服务端</h3><p>在服务端所在目录下新建一个文本文档，在里面写入以下内容：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">java -Xms512M -Xmx2G -jar 你的服务端.jar nogui</span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
+
+<p>然后点击右上角文件——另存为为一个后缀为.bat的文件</p>
+<p>最后双击那个.bat文件。你会发现，它启动后创建了一些文件自动退出了。这时候回到服务端目录，双击打开eula.txt，把里面的false改为true，然后再次启动。</p>
+<p>启动1.19.3，点击多人游戏——添加服务器，在里面输入localhost:25565</p>
+<p>enjoy~</p>
+<h3 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h3><h4 id="无法进入服务器（验证失败）："><a href="#无法进入服务器（验证失败）：" class="headerlink" title="无法进入服务器（验证失败）："></a>无法进入服务器（验证失败）：</h4><p>用记事本打开server.properties文件，将online-mode&#x3D;true改为online-mode&#x3D;false，然后保存退出并重启服务器（输入stop后重新启动）</p>
+<h4 id="启动报错"><a href="#启动报错" class="headerlink" title="启动报错"></a>启动报错</h4><p>检查下内存够不够、Java有没有配置好（如果你电脑之前没有安装过任何java应该就是已经配置好的）。如果还不行，换台电脑吧。</p>
+<h4 id="想和朋友一起玩"><a href="#想和朋友一起玩" class="headerlink" title="想和朋友一起玩"></a>想和朋友一起玩</h4><h5 id="超过16岁并有一块钱："><a href="#超过16岁并有一块钱：" class="headerlink" title="超过16岁并有一块钱："></a>超过16岁并有一块钱：</h5><p>打开 <a target="_blank" rel="noopener" href="https://www.natfrp.com/">樱花内网穿透官网</a> 并注册个账号，然后实名。最后下载客户端并登录，然后新建个隧道，内网ip设为127.0.0.1，端口25565，节点建议枣庄。启动隧道就可以了</p>
+<h5 id="没达到16岁且没钱"><a href="#没达到16岁且没钱" class="headerlink" title="没达到16岁且没钱"></a>没达到16岁且没钱</h5><p> <a target="_blank" rel="noopener" href="https://bilibili.com/">bilibili.com</a> </p>
+<h4 id="想玩点别的玩法，例如模组"><a href="#想玩点别的玩法，例如模组" class="headerlink" title="想玩点别的玩法，例如模组"></a>想玩点别的玩法，例如模组</h4><p>用别的服务端，启动方法差不多</p>
+<h4 id="其他问题"><a href="#其他问题" class="headerlink" title="其他问题"></a>其他问题</h4><p>评论</p>
+<h1 id="End"><a href="#End" class="headerlink" title="End"></a>End</h1>
+    <p><img src=" https://api.fanet.top/img/r/genshin" loading="lazy"></p>
+
+  </article>
+
+  
+      
+    <div class="nexmoe-post-copyright">
+        <strong>本文作者：</strong>xiaojiang233<br>
+        <strong>本文链接：</strong><a href="http://example.com/2023/07/07/%E5%A6%82%E4%BD%95%E5%BC%80%E5%90%AF%E4%B8%80%E4%B8%AA%E3%80%8AMinecraft%E3%80%8B%E6%9C%8D%E5%8A%A1%E5%99%A8/" title="http:&#x2F;&#x2F;example.com&#x2F;2023&#x2F;07&#x2F;07&#x2F;%E5%A6%82%E4%BD%95%E5%BC%80%E5%90%AF%E4%B8%80%E4%B8%AA%E3%80%8AMinecraft%E3%80%8B%E6%9C%8D%E5%8A%A1%E5%99%A8&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;example.com&#x2F;2023&#x2F;07&#x2F;07&#x2F;%E5%A6%82%E4%BD%95%E5%BC%80%E5%90%AF%E4%B8%80%E4%B8%AA%E3%80%8AMinecraft%E3%80%8B%E6%9C%8D%E5%8A%A1%E5%99%A8&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+
+        
+    </div>
+
+
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+   
+    
+</div>
+  
+  
+    <script async src="/js/copy-codeblock.js?v=1688740737039"></script>
+  
+
+  
+      <div class="nexmoe-post-footer">
+          请在你的配置文件中设置 slotComment
+
+      </div>
+  
+</div>
+</div>
+        <div class="nexmoe-post-right">
+              <div class="nexmoe-fixed">
+                  <div class="nexmoe-tool"> 
+                    
+                      
+                        
+                          
+                          
+                              <button class="mdui-fab catalog" style="overflow:unset;">
+                                  <i class="nexmoefont icon-i-catalog"></i>
+                                  <div class="nexmoe-toc">
+                                      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C"><span class="toc-number">1.0.1.</span> <span class="toc-text">什么是我的世界</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E7%9A%84%E6%9C%8D%E5%8A%A1%E7%AB%AF"><span class="toc-number">1.0.2.</span> <span class="toc-text">常用的服务端</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%AD%A3%E6%96%87"><span class="toc-number">2.</span> <span class="toc-text">正文</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BDjava"><span class="toc-number">2.0.1.</span> <span class="toc-text">下载java</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E6%9C%8D%E5%8A%A1%E7%AB%AF"><span class="toc-number">2.0.2.</span> <span class="toc-text">下载服务端</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E6%9C%8D%E5%8A%A1%E7%AB%AF"><span class="toc-number">2.0.3.</span> <span class="toc-text">启动服务端</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="toc-number">2.0.4.</span> <span class="toc-text">常见问题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%97%A0%E6%B3%95%E8%BF%9B%E5%85%A5%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%88%E9%AA%8C%E8%AF%81%E5%A4%B1%E8%B4%A5%EF%BC%89%EF%BC%9A"><span class="toc-number">2.0.4.1.</span> <span class="toc-text">无法进入服务器（验证失败）：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E6%8A%A5%E9%94%99"><span class="toc-number">2.0.4.2.</span> <span class="toc-text">启动报错</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%83%B3%E5%92%8C%E6%9C%8B%E5%8F%8B%E4%B8%80%E8%B5%B7%E7%8E%A9"><span class="toc-number">2.0.4.3.</span> <span class="toc-text">想和朋友一起玩</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%B6%85%E8%BF%8716%E5%B2%81%E5%B9%B6%E6%9C%89%E4%B8%80%E5%9D%97%E9%92%B1%EF%BC%9A"><span class="toc-number">2.0.4.3.1.</span> <span class="toc-text">超过16岁并有一块钱：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B2%A1%E8%BE%BE%E5%88%B016%E5%B2%81%E4%B8%94%E6%B2%A1%E9%92%B1"><span class="toc-number">2.0.4.3.2.</span> <span class="toc-text">没达到16岁且没钱</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%83%B3%E7%8E%A9%E7%82%B9%E5%88%AB%E7%9A%84%E7%8E%A9%E6%B3%95%EF%BC%8C%E4%BE%8B%E5%A6%82%E6%A8%A1%E7%BB%84"><span class="toc-number">2.0.4.4.</span> <span class="toc-text">想玩点别的玩法，例如模组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E9%97%AE%E9%A2%98"><span class="toc-number">2.0.4.5.</span> <span class="toc-text">其他问题</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#End"><span class="toc-number">3.</span> <span class="toc-text">End</span></a></li></ol>
+                                  </div>
+                              </button>
+                          
+                          
+                      
+                    
+                      <a href="#nexmoe-content" class="toc-link" aria-label="Back To Top" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
+                  </div>
+              </div>
+            </div>
+    </div>
+    <div id="nexmoe-search-space">
+	<div class="search-container">
+		<div class="search-header">
+			<div class="search-input-container">
+				<input
+					class="search-input"
+					type="text"
+					placeholder="搜索"
+					oninput="sinput();"
+				/>
+			</div>
+			<a class="search-close" onclick="sclose();">×</a>
+		</div>
+		<div class="search-body"></div>
+	</div>
+</div>
+
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2058306854838448" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
